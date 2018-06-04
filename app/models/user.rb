@@ -6,5 +6,7 @@ class User < ActiveRecord::Base
 	# All the users that are following me
 	has_many :follow_followers, foreign_key: :followee_id, class_name: 'Follow'
 	has_many :followers, through: :follow_followers, source: :follower
+
+	# This is the user model
 end
 
